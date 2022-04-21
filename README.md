@@ -9,17 +9,15 @@ In sequential settings, Bayesian parameter estimation can be performed either in
 - IMH-GM-based sequential Monte Carlo filter
 
 In this repository, the filters are applied on the following two numerical examples:
-- A non-linear, non-Gaussian, low-dimensional probabilistic fatigue crack growth model that is updated with sequential crack monitoring measurements.
-- A linear, Gaussian, high-dimensional random field model of the spatially and temporally varying corrosion deterioration across a beam, which is updated with sequential measurements from sensors. 
+- A non-linear, non-Gaussian, low-dimensional probabilistic fatigue crack growth model that is updated with sequential crack monitoring measurements. The corresponding Matlab codes are found in the folder "cgm" of this repository.
+- A linear, Gaussian, high-dimensional random field model of the spatially and temporally varying corrosion deterioration across a beam, which is updated with sequential measurements from sensors. The corresponding Matlab codes are found in the folder "hdRF" of this repository.
+- 
+## Notes
 
-## Documentation
-
-The following paper serves as documentation 
+- Use of ERADist, ERANataf
 
 ## Citation
 
 Antonios Kamariotis, Luca Sardi, Iason Papaioannou, Eleni Chatzi, Daniel Straub (2022), On off-line and on-line Bayesian filtering for uncertainty quantification of structural deterioration, arXiv preprint.
 
-## Notes
 
-- Use of ERADist, ERANataf
