@@ -1,1 +1,1 @@
-# Offline_online_Bayes
+# Off-line and on-line Bayesian filtering
