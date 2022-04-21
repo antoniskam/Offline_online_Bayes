@@ -8,6 +8,10 @@ In sequential settings, Bayesian parameter estimation can be performed either in
 - IMH-GM-based iterated batch importance sampling with likelihood tempering (tIBIS) filter
 - IMH-GM-based sequential Monte Carlo filter
 
+In this repository, the filters are applied on the following two numerical examples:
+- A non-linear, non-Gaussian, low-dimensional probabilistic fatigue crack growth model that is updated with sequential crack monitoring measurements.
+- A linear, Gaussian, high-dimensional random field model of the spatially and temporally varying corrosion deterioration across a beam, which is updated with sequential measurements from sensors. 
+
 ## Documentation
 
 The following paper serves as documentation 
