@@ -12,8 +12,7 @@ In this repository, the filters are applied on the following two numerical examp
 - cgm: a non-linear, non-Gaussian, low-dimensional probabilistic fatigue crack growth model that is updated with sequential crack monitoring measurements. 
 - hdRF: a linear, Gaussian, high-dimensional random field model of the spatially and temporally varying corrosion deterioration across a beam, which is updated with sequential measurements from sensors.
 
-## Computational remarks
-- The  algebraic  operations  in  all  presented  algorithms  are  implemented  in  the  logarithmic  scale,  which employs evaluations of the logarithm of the likelihood function and, hence, ensures computational stability.
+## Computational remark
 - The  EM  step  for  fitting  the  Gaussian mixture model  is  performed  after  initially  transforming  the  prior  joint probability density function of the parameters to an underlying vector of independent standard normal random variables. This transformation is beneficial, since in the standard normal space the parameters are decorrelated,and that enhances the performance of the EM algorithm. This transformation is performed with the use of the ERANataf Matlab class, which is part of the ERADist Matlab package developed by the Engineering Risk Analysis (ERA) group at the Technical University of Munich. The ERADist software is freely available from this link (https://www.cee.ed.tum.de/era/software/). 
 
 ## Citation
