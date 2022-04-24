@@ -10,10 +10,6 @@ www.era.bgu.tum.de
 ---------------------------------------------------------------------------
 Version 2021-03
 ---------------------------------------------------------------------------
-Comments:
-* The SMC method in combination with a Gaussian Mixture model can only be
-  applied for low-dimensional problems, since its accuracy decreases
-  dramatically in high dimensions.---------------------------------------------------------------------------
 Input:
 * N      : number of samples per level
 * p      : N/number of chains per level

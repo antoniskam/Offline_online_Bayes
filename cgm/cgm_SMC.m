@@ -20,27 +20,28 @@ lh_a=@(a,meas)likelihood_eval(a,meas,mu_meas,sig_meas);
 lh_x_cur=@(x)lh_a(state_fun_x(x,n(2:end)),a_meas);
 log_likelihood_cur = @(theta) log(lh_x_cur(theta)+realmin);
 
-nGM=8;
-burn=0;
+nGM=8;  % number of Gaussians in the mixture
+burn=0; % number of burn-in steps for the IMH-GM
 tarCoV=sqrt(1/0.5-1);
 p=1;
 
+% the SMC_GM algorithm is implemented in the SMC_GM.m found in the
+% auxiliary functions folder
 [samplesU, samplesX, q, k_fin, logcE] = SMC_GM(N, p, log_likelihood_cur, prior, nGM, burn, tarCoV);
 
 part_x=samplesX{end};
 part_u=samplesU{end};
 
-logcE
+logcE; 
 
-%%
+%% compute statistics of the posterior samples 
+x_p_mu=mean(part_x);
+x_p_std=std(part_x);
+x_p_skewness=skewness(part_x);
+x_p_kurtosis=kurtosis(part_x);
+x_p_corr=corr(part_x);
 
-x_p_mu=mean(part_x)
-x_p_std=std(part_x)
-x_p_skewness=skewness(part_x)
-x_p_kurtosis=kurtosis(part_x)
-x_p_corr=corr(part_x)
-
-%%%%%%%%%%%%%%%%%
+%% plots
 
 figure()
 tiledlayout(2,2);

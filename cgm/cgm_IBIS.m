@@ -7,11 +7,7 @@ clear; clc; close all;
 set(0,'DefaultTextInterpreter','latex')
 
 load('cgm_stat_rng1.mat')
-%load('cgm_stat_rng1_200.mat')
-rng(1)
 rng('shuffle')
-rng(1)
-
 %% setup
 
 % functions to evaluate the state and likelihood
@@ -32,8 +28,12 @@ res_i=[];           % resampling 'register'
 nw_i=[];            % number of used mixtures
 
 % parameter samples
-part_u=randn(np,4);
-part_x=u2x(part_u);
+part_u=randn(np,4); % samples in the standard normal space
+
+part_x=u2x(part_u);% samples in the physical space. The function u2x is 
+                    % implemented in the ERANataf class.
+                    % the u2x function is here inserted from the
+                    % load('cgm_stat_rng1.mat') file
 w=1/np*ones(np,1);
 
 % pre-allocation of parameter estimate statistics in physical space
@@ -77,6 +77,7 @@ u_p_75_u=zeros(nn,4);
 u_p_75_u(1,:)=quantile(part_u,0.875);
 
 % pre-allocation of state estimate statistics (physical & log space)
+% taken as outputs of the calibrated deterioration model with posterior parameter estimates
 part_a=[part_x(:,1),log(part_x(:,1))];
 a_p_mu=zeros(nn,2);
 a_p_mu(1,:)=mean(part_a);
