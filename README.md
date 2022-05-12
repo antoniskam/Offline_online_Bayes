@@ -17,6 +17,6 @@ In this repository, the filters are applied on the following two numerical examp
 ## Citation
 This repository contains the algorithm implementations and numerical examples presented in this publication:
 
-- Antonios Kamariotis, Luca Sardi, Iason Papaioannou, Eleni Chatzi, Daniel Straub (2022), On off-line and on-line Bayesian filtering for uncertainty quantification of structural deterioration, arXiv preprint.
+- Antonios Kamariotis, Luca Sardi, Iason Papaioannou, Eleni Chatzi, Daniel Straub (2022), On off-line and on-line Bayesian filtering for uncertainty quantification of structural deterioration, arXiv:2205.03478
 
 
